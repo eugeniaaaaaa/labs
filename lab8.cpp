@@ -39,7 +39,8 @@ int** matrix_initialization(int ROW) //инициализация матрицы
 	}
      
 
-	int find_min_elements(int ROW, int COL, int **arr, int min, int min_ind)//поиск индекса столбца с минимальным элементом матрицы С
+	int find_min_elements(int ROW, int COL, int **arr, int min, int min_ind)/*поиск индекса столбца с
+	                                                                          минимальным элементом матрицы С*/
 	{
 		min = arr[0][0];
 		min_ind = 0;
