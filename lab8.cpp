@@ -21,7 +21,7 @@ int** matrix_initialization(int ROW) //инициализация матрицы
 	return arr;
 }
 	 
-  void filling_and_output_the_matrix(int ROW, int COL, int **arr) //заполнение и вывод матрицы 
+  void filling_and_output_the_matrix(int ROW, int COL, int **arr)//заполнение и вывод матрицы 
 	{
 		setlocale(LC_ALL, "rus");
 		
@@ -39,7 +39,7 @@ int** matrix_initialization(int ROW) //инициализация матрицы
 	}
      
 
-	int find_min_elements(int ROW, int COL, int **arr, int min, int min_ind)// поиск индекса столбца с минимальным элементом матрицы С
+	int find_min_elements(int ROW, int COL, int **arr, int min, int min_ind)//поиск индекса столбца с минимальным элементом матрицы С
 	{
 		min = arr[0][0];
 		min_ind = 0;
@@ -61,7 +61,7 @@ int** matrix_initialization(int ROW) //инициализация матрицы
 
 	
 
-	int find_max_elements(int max, int **arr, int COL, int ROW, int max_ind)// поиск индекса столбца с максимальным элементом
+	int find_max_elements(int max, int **arr, int COL, int ROW, int max_ind)//поиск индекса столбца с максимальным элементом
 	{
 		max_ind = 0;
 		max = arr[0][0];
@@ -138,16 +138,20 @@ int** matrix_initialization(int ROW) //инициализация матрицы
 		int min_ind = 0;
 		int min_ind1 = 0;
 		int min1 = 0;
-		std::cout << "Индекс столбца с наименьшим числом в матрице С: " << find_min_elements(ROW, COL, arr, min, min_ind) << endl;
-		std::cout << "Индекс столбца с наименьшим числом в матрице В: " << find_min_elements(ROW1, COL1, arr1, min1, min_ind1) << endl;
+		std::cout << "Индекс столбца с наименьшим числом в матрице С: ";
+		std:: cout << find_min_elements(ROW, COL, arr, min, min_ind) << endl;
+		std::cout << "Индекс столбца с наименьшим числом в матрице В: ";
+		std::cout << find_min_elements(ROW1, COL1, arr1, min1, min_ind1) << endl;
 		
 		
 		int max = 0;
 		int max_ind = 0;
 		int max1 = 0;
 		int max_ind1 = 0;
-		std::cout << "Индекс столбца с наибольшим числом в матрице C: " << find_max_elements(max, arr, COL, ROW, max_ind) << endl;
-		std::cout << "Индекс столбца с наибольшим числом в матрице В: " << find_max_elements(max1, arr1, COL1, ROW1, max_ind1) << endl;
+		std::cout << "Индекс столбца с наибольшим числом в матрице C: ";
+		std::cout << find_max_elements(max, arr, COL, ROW, max_ind) << endl;
+		std::cout << "Индекс столбца с наибольшим числом в матрице В: ";
+		std::cout << find_max_elements(max1, arr1, COL1, ROW1, max_ind1) << endl;
 
 		min_ind = find_min_elements(ROW, COL, arr, min, min_ind);
 		max_ind = find_max_elements(max, arr, COL, ROW, max_ind);
